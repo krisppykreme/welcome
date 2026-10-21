@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're Confirmed! - Crown Liberty</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Canvas Confetti CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(1deg); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        .dark-glass {
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .glow-effect {
+            box-shadow: 0 0 50px -10px rgba(236, 72, 153, 0.3);
+        }
+    </style>
+</head>
+<body class="h-full bg-slate-950 text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-pink-500 selection:text-white">
+
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-purple-600/30 rounded-full blur-[140px] animate-pulse"></div>
+        <div class="absolute top-1/3 -right-40 w-96 h-96 bg-pink-600/30 rounded-full blur-[140px] animate-pulse" style="animation-delay: 2s;"></div>
+        <div class="absolute -bottom-40 left-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-[140px] animate-pulse" style="animation-delay: 4s;"></div>
+    </div>
+
+    <div class="relative z-10 min-h-full flex flex-col justify-between p-4 sm:p-6 md:p-8 max-w-4xl mx-auto">
+
+        <!-- Header / Success Status Banner -->
+        <header class="text-center pt-6 sm:pt-10 mb-6">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-emerald-500/10 via-pink-500/10 to-purple-500/10 border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-semibold tracking-wider uppercase mb-4 shadow-sm animate-bounce">
+                <i class="fa-solid fa-champagne-glasses"></i> Invitation Confirmed Successfully
+            </div>
+            <h1 class="font-serif text-4xl sm:text-6xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-pink-200 bg-clip-text text-transparent mb-3">
+                We Can't Wait to Celebrate!
+            </h1>
+            <p class="text-slate-300 text-sm sm:text-base max-w-lg mx-auto">
+                Your spot is locked in. Get ready for an unforgettable night filled with high energy, great company, and celebration.
+            </p>
+        </header>
+
+        <main class="my-auto py-2">
+            <div class="dark-glass rounded-3xl p-6 sm:p-10 glow-effect relative overflow-hidden transition-all duration-500">
+                
+                <!-- Decorative background elements -->
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-pink-500/20 to-transparent rounded-bl-full pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-tr-full pointer-events-none"></div>
+
+                <!-- Venue Info Block: Crown Liberty -->
+                <div class="bg-gradient-to-br from-slate-900/95 to-purple-950/70 rounded-2xl p-6 sm:p-8 border border-pink-500/30 shadow-2xl text-left relative overflow-hidden mb-8">
+                    <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-pink-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
+                        <div class="space-y-4 flex-1">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-semibold tracking-wide uppercase border border-pink-500/30">
+                                <i class="fa-solid fa-location-dot"></i> Official Venue Location
+                            </div>
+                            <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white tracking-wide">
+                                Crown Liberty
+                            </h2>
+                            <p class="text-slate-300 text-sm sm:text-base flex items-start gap-2.5 leading-relaxed">
+                                <i class="fa-solid fa-map-pin text-pink-400 mt-1 shrink-0"></i>
+                                <span>Prof J E A Mills Bypass,KOkrobite,greater Accra Region. 15 km</span>
+                            </p>
+                            
+                            <!-- Event Quick Badges -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs sm:text-sm text-slate-300">
+                                <div class="flex items-center gap-2.5 bg-slate-800/80 px-3.5 py-2.5 rounded-xl border border-slate-700/80">
+                                    <i class="fa-regular fa-calendar text-pink-400 text-base"></i>
+                                    <div>
+                                        <p class="text-[10px] uppercase text-slate-400 font-semibold">Date</p>
+                                        <p class="font-medium text-white">Saturday, Dec 19, 2026</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2.5 bg-slate-800/80 px-3.5 py-2.5 rounded-xl border border-slate-700/80">
+                                    <i class="fa-regular fa-clock text-pink-400 text-base"></i>
+                                    <div>
+                                        <p class="text-[10px] uppercase text-slate-400 font-semibold">Time</p>
+                                        <p class="font-medium text-white">3:00 PM Onwards</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2.5 bg-slate-800/80 px-3.5 py-2.5 rounded-xl border border-slate-700/80 sm:col-span-2">
+                                    <i class="fa-solid fa-shirt text-pink-400 text-base"></i>
+                                    <div>
+                                        <p class="text-[10px] uppercase text-slate-400 font-semibold">Dress Code</p>
+                                        <p class="font-medium text-white">Choice</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Map Preview / Directions Link Container -->
+                        <div class="w-full md:w-72 h-48 rounded-2xl overflow-hidden relative border border-slate-700 shadow-xl group shrink-0">
+                            <img src="https://placehold.co/600x400/1e1b4b/f472b6?text=Crown+Liberty+Venue" alt="Crown Liberty Venue Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/1e1b4b/ffffff?text=Crown+Liberty'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex items-end p-3">
+                                <a href="https://maps.google.com/?cid=2058460163064151025" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white text-xs font-bold rounded-xl text-center shadow-lg transition-all flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-diamond-turn-right"></i> Open in Google Maps
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xs sm:text-sm font-semibold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-sparkles text-pink-400"></i> Party Vibe Preview
+                    </h3>
+                    <div class="grid grid-cols-3 gap-3">
+                        <div class="h-24 sm:h-32 rounded-2xl overflow-hidden border border-slate-800 group relative shadow-md">
+                            <img src="https://placehold.co/400x300/31103f/f472b6?text=Music+%26+Vibes" alt="Party vibes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent flex items-end p-2">
+                                <span class="text-[11px] font-medium text-white">Live DJ & Beats</span>
+                            </div>
+                        </div>
+                        <div class="h-24 sm:h-32 rounded-2xl overflow-hidden border border-slate-800 group relative shadow-md">
+                            <img src="https://placehold.co/400x300/1e1b4b/ec4899?text=Gourmet+%26+Drinks" alt="Food and drinks" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent flex items-end p-2">
+                                <span class="text-[11px] font-medium text-white">Open Bar & Bites</span>
+                            </div>
+                        </div>
+                        <div class="h-24 sm:h-32 rounded-2xl overflow-hidden border border-slate-800 group relative shadow-md">
+                            <img src="https://placehold.co/400x300/4c1d95/f472b6?text=Good+Times" alt="Celebration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent flex items-end p-2">
+                                <span class="text-[11px] font-medium text-white">Great Memories</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Footer inside Card -->
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-800/80">
+                    <p class="text-xs text-slate-400">
+                        Need to update your guest pass or have questions? Contact the host.
+                    </p>
+                    <button onclick="triggerPartyConfetti()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-pink-300 hover:text-white text-xs font-semibold border border-slate-700 transition-colors flex items-center gap-2 cursor-pointer shadow-sm">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Replay Celebration FX
+                    </button>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="text-center py-4 text-xs text-slate-500">
+            &copy; 2026 Crown Liberty Grand Celebration. See you on the dance floor!
+        </footer>
+
+    </div>
+
+    <script>
+        function triggerPartyConfetti() {
+            var count = 250;
+            var defaults = {
+                origin: { y: 0.7 }
+            };
+
+            function fire(particleRatio, opts) {
+                confetti(Object.assign({}, defaults, opts, {
+                    particleCount: Math.floor(count * particleRatio)
+                }));
+            }
+
+            fire(0.25, {
+                spread: 30,
+                startVelocity: 60,
+            });
+            fire(0.2, {
+                spread: 70,
+            });
+            fire(0.35, {
+                spread: 110,
+                decay: 0.91,
+                scalar: 0.8
+            });
+            fire(0.1, {
+                spread: 130,
+                startVelocity: 30,
+                decay: 0.92,
+                scalar: 1.2
+            });
+            fire(0.1, {
+                spread: 140,
+                startVelocity: 50,
+            });
+        }
+
+        // Automatically trigger confetti celebration as soon as the page loads
+        window.onload = function() {
+            triggerPartyConfetti();
+            
+            // Second burst for extra excitement
+            setTimeout(() => {
+                triggerPartyConfetti();
+            }, 600);
+        };
+    </script>
+</body>
+</html>

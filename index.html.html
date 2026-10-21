@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Invitation...</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #0A3DFF, #000000);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .card {
+            background: lavender;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 90%;
+        }
+        h1 {
+            color:darkcyan;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #072A6C;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background-color: #040721;
+        }
+        marquee {
+               color: darkcyan;
+               font-family:garamond ;
+               display: flex;
+               font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <marquee>SCIENCE CLASS OF 2025 </marquee>
+        <h1>GET TOGETHER </h1>
+        
+        <!-- REPLACE YOUR_FORM_ID_HERE with the code you get from Formspree -->
+        <form action="https://formspree.io/f/mjykqloy" method="POST">
+            &#128100;<input type="text" name="name" placeholder="please enter your name" required>
+            <br>
+            &#128205;<input type="text" name="location" placeholder="please enter your location" required><br>
+            &#9742;<input type="text" name="contact" placeholder="please enter your contact" required><br>
+            <input type="hidden" name="response" value=" i will come ">
+            <p>Hi !<br>We are organiszing a Gettogether for our <br>coleagues if you are interested fill in your<br>
+            detail to know the date and location </p>
+           <button type="submit"> AGREE</button>
+           <p>After checking the location come back and fill in the forms</p>
+           <p><button type="submit"><a href="agree.html">
+           LOCATION</a></button></p>
+        </form>
+    </div>
+
+</body>
+</html>
